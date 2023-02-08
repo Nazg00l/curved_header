@@ -53,11 +53,6 @@ class _MezzoScrollPageState extends State<MezzoScrollPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
       body: SingleChildScrollView(
         controller: scrollController,
         child: Column(
@@ -130,19 +125,11 @@ class MezzoClipper extends CustomClipper<Path> {
 }
 
 List<Widget> DummyWidgets() => <Widget>[
-      const SizedBox(height: 25),
-      const Text('Under header'),
-      const SizedBox(height: 100),
-      const Text('Under header 2'),
-      const SizedBox(height: 100),
-      const Text('Under header 3'),
-      const SizedBox(height: 100),
-      const Text('Under header 4'),
-      const SizedBox(height: 100),
-      const Text('Under header 5'),
-      const SizedBox(height: 100),
-      Container(
-        color: Colors.teal.shade200,
-        child: const Text('The container'),
-      )
+      SizedBox(height: 120, child: Container(color: Colors.blueAccent)),
+      SizedBox(height: 120, child: Container(color: Colors.blueGrey)),
+      SizedBox(height: 120, child: Container(color: Colors.cyan)),
+      SizedBox(height: 120, child: Container(color: Colors.cyanAccent)),
+      SizedBox(height: 120, child: Container(color: Colors.deepPurple.shade300)),
+      SizedBox(height: 120, child: Container(color: Colors.indigo)),
+      SizedBox(height: 120, child: Container(color: Colors.indigo.shade300)),
     ];
